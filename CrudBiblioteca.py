@@ -33,13 +33,13 @@ class Biblioteca:
         for livro in self.livros:
             if livro._id==id:
                 if novo_titulo:
-                    livro.titulo=novotitulo
+                    livro.titulo=novo_titulo
                 if novo_autor:
-                    livro.autor=novoautor
+                    livro.autor=novo_autor
                 if nova_categoria:
-                    livro.categoria=novacategoria
+                    livro.categoria=nova_categoria
                 if novos_tatus:
-                    livro.status=novostatus
+                    livro.status=novo_status
                 print("Livro Actualizado com sucesso")
                 return
                 print("Livro nao Encontrado")
@@ -77,9 +77,9 @@ def menu():
             biblioteca.listarLivros()
         elif opcao == "3":
             id_livro=int(input("ID do livro a Actualizar:"))
-            titulo=input("ID do livro a Actualizar:")
-            autor=input("ID do livro a Actualizar:")
-            ano=input("ID do livro a Actualizar:")
+            titulo=input("Titulo do livro a Actualizar:")
+            autor=input("Nome do Autor do livro a Actualizar:")
+            ano=input("Ano do livro a Actualizar:")
             novacategoria=input("Nova Categoriar: ") or None
             status=input("Novo Status: ") or None
             biblioteca.actualizarLivro(id_livro,titulo,autor, ano, categoria, status)
